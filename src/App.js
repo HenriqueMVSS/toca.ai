@@ -1,24 +1,51 @@
-import logo from './logo.svg';
-import './App.css';
+import {React, useState} from 'react';
+import styled from 'styled-components'
+
+import './App.css'
+import banner from './Banner.svg'
+
+
+
+const Header = styled.header`
+
+  margin-bottom: 10px;
+  width: 100%;
+  height: 270px;
+  background-image:url(${banner}) ;
+  background-repeat: no-repeat;
+  background-position:center ;
+    
+`
+
+const Logo = styled.p`
+    font-weight:bold;
+    color: #0f0;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 38px;
+    text-align:center;
+`
+const Album1 = styled.div`
+    width:400px;
+    margin: 200px;
+    display:inline;
+    
+`
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Toca.aí
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+       <Header/>
+        <hr style={{marginLeft:20, marginRight: 20}}/>
+        <Logo>Toca.aí</Logo>
+        <Album1>
+          <img src={banner} style={{width:200, height:80}} alt=""/>
+          <img src={banner} style={{width:200, height:80}} alt=""/>
+          <img src={banner} style={{width:200, height:80}} alt=""/>
+          <img src={banner} style={{width:200, height:80}} alt=""/>
+        
+        </Album1>
+
+    </>
   );
 }
 
